@@ -213,7 +213,7 @@ const CreatePoint = () => {
 								<option value="0">Selecione uma UF</option>
 								{
 									ufs.map(it => (
-										<option key={it.id} value={it.id}>{it.name}</option>
+										<option key={it.id} value={it.name}>{it.name}</option>
 									))
 								}
 							</select>
@@ -229,7 +229,7 @@ const CreatePoint = () => {
 								<option value="0">Selecione uma cidade</option>
 								{
 									cities.map(it => (
-										<option key={it.id} value={it.id}>{it.name}</option>
+										<option key={it.id} value={it.name}>{it.name}</option>
 									))
 								}
 							</select>
