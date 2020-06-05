@@ -24,3 +24,5 @@ yarn-error.log*
 
 
 /uploads/user
+
+*.sqlite
