@@ -21,6 +21,7 @@ interface Point {
 	id: number,
 	name: string,
 	image: string,
+	image_url: string,
 	city: string,
 	uf: string,
 	email: string,
@@ -80,7 +81,7 @@ const Detail = () => {
 
 				<Image
 					style={styles.pointImage}
-					source={{ uri: data.point.image }} />
+					source={{ uri: data.point.image_url }} />
 
 				<Text style={styles.pointName}>{data.point.name}</Text>
 				<Text style={styles.pointItems}>{data.items.map(it => it.title).join(',')}</Text>

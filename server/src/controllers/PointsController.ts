@@ -18,7 +18,14 @@ class PointsController {
 			.distinct()
 			.select('points.*');
 
-		return response.json(points);
+		const serialized = points.map(it => {
+			return {
+				...it,
+				image_url: `http://localhost:3333/uploads/user/${it.image}`
+			}
+		});
+
+		return response.json(serialized);
 	}
 
 	async show(request: Request, response: Response) {
@@ -37,7 +44,13 @@ class PointsController {
 			.where('point_items.point_id', id)
 			.select('items.title')
 
-		return response.json({ point, items });
+		const serialized = {
+			...point,
+			image_url: `http://localhost:3333/uploads/user/${point.image}`
+		};
+
+
+		return response.json({ point: serialized, items });
 	}
 
 	async create(request: Request, response: Response) {
@@ -62,21 +75,21 @@ class PointsController {
 			longitude,
 			city,
 			uf,
-			image: 'https://images.unsplash.com/photo-1515003233195-4a6c9dc5cbf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60'
+			image: request.file.filename
 		};
 
 		const insertedIds = await trx('points').insert(point);
 
 		const point_id = insertedIds[0];
-		const point_items = items.map((item_id: Number) => {
-			return {
-				item_id,
-				point_id,
-			}
-		});
-
-		console.log(point_id)
-		console.log(point_items)
+		const point_items = items
+			.split(',')
+			.map((it: string) => Number(it.trim()))
+			.map((item_id: Number) => {
+				return {
+					item_id,
+					point_id,
+				}
+			});
 
 		await trx('point_items').insert(point_items);
 		await trx.commit()
