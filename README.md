@@ -68,6 +68,10 @@ yarn start
 # Run on expo
 ```
 
+<h1 align="center">
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/mobile.png" width="250px" />
+</h1>
+
 ## :bullettrain_side: Contributing
 
 1. Fork it
