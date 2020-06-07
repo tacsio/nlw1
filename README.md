@@ -9,9 +9,9 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/tacsio/nextlevelweek1?color=%237159c1)
 ![GitHub top language](https://img.shields.io/github/languages/top/tacsio/nextlevelweek1?color=%237159c1)
 ![GitHub last commit](https://img.shields.io/github/last-commit/tacsio/nextlevelweek1?color=%237159c1)
-![GitHub issues](https://img.shields.io/github/issues-raw/tacsio/nextlevelweek1?color=%237159c1)
-![GitHub contributors](https://img.shields.io/github/contributors/tacsio/nextlevelweek1?color=%237159c1)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/tacsio/nextlevelweek1?color=%237159c1)
+[![GitHub issues](https://img.shields.io/github/issues-raw/tacsio/nextlevelweek1?color=%237159c1)](https://github.com/tacsio/nextlevelweek1/issues)
+[![GitHub contributors](https://img.shields.io/github/contributors/tacsio/nextlevelweek1?color=%237159c1)](https://github.com/tacsio/nextlevelweek1/graphs/contributors)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/w/tacsio/nextlevelweek1?color=%237159c1)](https://github.com/tacsio/nextlevelweek1/graphs/commit-activity)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020?color=%237159c1)
 
 ## :zap: Backend
